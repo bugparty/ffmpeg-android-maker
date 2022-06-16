@@ -19,8 +19,9 @@ jobs:
       - name: Setup the environment
         run: |
           sudo pip3 install meson==0.58.2
-          sudo apt-get install nasm ninja-build ant
-
+          sudo apt-get install nasm ninja-build
+      - name: Show jdk versions
+        run: update-alternatives --list java
       - name: Executing the script
         run: |
           export ANDROID_SDK_HOME=$ANDROID_HOME
