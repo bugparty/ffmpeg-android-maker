@@ -20,12 +20,6 @@ jobs:
         run: |
           sudo pip3 install meson==0.58.2
           sudo apt-get install nasm ninja-build
-      - name: Set JDK to version 8
-        run: |
-          update-alternatives --list java
-          update-alternatives --list javac
-          sudo update-alternatives --set java /usr/lib/jvm/adoptopenjdk-8-hotspot-amd64/bin/java
-          sudo update-alternatives --set javac /usr/lib/jvm/adoptopenjdk-8-hotspot-amd64/bin/javac
       - name: Executing the script
         run: |
           export ANDROID_SDK_HOME=$ANDROID_HOME

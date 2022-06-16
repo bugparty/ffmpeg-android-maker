@@ -16,6 +16,7 @@ LIBS="-lz" \
     --with-pic \
     --without-libxml2 \
     --without-fontconfig \
+    --with-java9 \
     ${LIBLURAY_ADDITIONAL_FLAGS} || exit 1
 
 ${MAKE_EXECUTABLE} clean
