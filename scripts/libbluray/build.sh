@@ -8,6 +8,7 @@ AS=${X264_AS} \
 RANLIB=${FAM_RANLIB} \
 STRIP=${FAM_STRIP} \
 LIBS="-lz" \
+JDK_HOME="/usr/lib/jvm/adoptopenjdk-8-hotspot-amd64" \
 ./configure \
     --prefix=${INSTALL_DIR} \
     --host=${TARGET} \
@@ -16,7 +17,6 @@ LIBS="-lz" \
     --with-pic \
     --without-libxml2 \
     --without-fontconfig \
-    --with-java9 \
     ${LIBLURAY_ADDITIONAL_FLAGS} || exit 1
 
 ${MAKE_EXECUTABLE} clean
