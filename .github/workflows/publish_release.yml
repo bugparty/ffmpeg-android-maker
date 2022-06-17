@@ -5,7 +5,7 @@ on:
       buildOptions:
         description: 'ffmepg build script options'   
         required: true
-        default: '-libbluray -android=21'
+        default: '-freetype -bluray -mbedtls -android=21'
 jobs:
   release:
     runs-on: ubuntu-latest
@@ -20,13 +20,6 @@ jobs:
         run: |
           sudo pip3 install meson==0.58.2
           sudo apt-get install nasm ninja-build
-      - name: Set JDK to version 8
-        run: |
-          update-alternatives --list java
-          update-alternatives --list javac
-          sudo update-alternatives --set java /usr/lib/jvm/adoptopenjdk-8-hotspot-amd64/bin/java
-          sudo update-alternatives --set javac /usr/lib/jvm/adoptopenjdk-8-hotspot-amd64/bin/javac
-          javac  -version
       - name: Executing the script
         run: |
           export ANDROID_SDK_HOME=$ANDROID_HOME
@@ -48,8 +41,9 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          tag_name: nightly-tag-${{ steps.date.outputs.date }}-${{ matrix.abi }}
+          tag_name: ${{ github.ref }}-${{ steps.date.outputs.date }}-${{ matrix.abi }}
           release_name: nightly-release-${{ steps.date.outputs.date }}-${{ matrix.abi }}
+          body: build options ${{ inputs.buildOptions }}
           draft: true
           prerelease: false
 
