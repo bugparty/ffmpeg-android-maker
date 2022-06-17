@@ -41,7 +41,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          tag_name: ${{ github.ref }}-${{ steps.date.outputs.date }}-${{ matrix.abi }}
+          tag_name: tag-${{ steps.date.outputs.date }}-${{ matrix.abi }}
           release_name: nightly-release-${{ steps.date.outputs.date }}-${{ matrix.abi }}
           body: build options ${{ inputs.buildOptions }}
           draft: true
