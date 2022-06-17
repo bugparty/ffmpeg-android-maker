@@ -17,6 +17,7 @@ JDK_HOME="/usr/lib/jvm/adoptopenjdk-8-hotspot-amd64" \
     --with-pic \
     --without-libxml2 \
     --without-fontconfig \
+    --disable-bdjava-jar \
     ${LIBLURAY_ADDITIONAL_FLAGS} || exit 1
 
 ${MAKE_EXECUTABLE} clean
