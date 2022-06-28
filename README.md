@@ -3,7 +3,7 @@
 ## how to build online
 
 just fork this project, click action, then click build release binaries, click run workflow, input your build options and click run workflow
-<img src="https://github.com/Javernaut/ffmpeg-android-maker/blob/master/images/github_action_example.png" >
+<img src="https://github.com/bugparty/ffmpeg-android-maker/blob/master/images/github_action_example.png" >
 the build result will be showed in the github release page
 
 ## original introduction
