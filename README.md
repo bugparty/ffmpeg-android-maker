@@ -6,6 +6,8 @@ just fork this project, click action, then click build release binaries, click r
 <img src="https://github.com/Javernaut/ffmpeg-android-maker/blob/master/images/github_action_example.png" >
 the build result will be showed in the github release page
 
+## original introduction
+
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/6b9a9fe4c6874e65a5e2a3f9beb15605)](https://app.codacy.com/manual/Javernaut/ffmpeg-android-maker)
 [![Compilability check](https://github.com/Javernaut/ffmpeg-android-maker/actions/workflows/compilability_check.yml/badge.svg?branch=master)](https://github.com/Javernaut/ffmpeg-android-maker/actions/workflows/compilability_check.yml)
 [![Android Weekly #378](https://androidweekly.net/issues/issue-378/badge)](https://androidweekly.net/issues/issue-378)
